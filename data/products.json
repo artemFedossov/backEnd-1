@@ -1,0 +1,29 @@
+[
+	{
+		"title": "title",
+		"description": "description",
+		"code": "code",
+		"price": 1,
+		"stock": 1,
+		"category": "category",
+		"id": "1722447020870"
+	},
+	{
+		"title": "title",
+		"description": "description",
+		"code": "code",
+		"price": 1,
+		"stock": 1,
+		"category": "category",
+		"id": "1722447021264"
+	},
+	{
+		"title": "title",
+		"description": "description",
+		"code": "code",
+		"price": 1,
+		"stock": 1,
+		"category": "category",
+		"id": "1722447021792"
+	}
+]
