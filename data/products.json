@@ -1,29 +1,11 @@
 [
 	{
-		"title": "title",
-		"description": "description",
-		"code": "code",
-		"price": 1,
-		"stock": 1,
-		"category": "category",
-		"id": "1722569692472"
-	},
-	{
-		"title": "title",
-		"description": "description",
-		"code": "code",
-		"price": 1,
-		"stock": 1,
-		"category": "category",
-		"id": "1722569695285"
-	},
-	{
-		"title": "title",
-		"description": "description",
-		"code": "code",
-		"price": 1,
-		"stock": 1,
-		"category": "category",
-		"id": "1722569699366"
+		"title": "Remera",
+		"description": "Remera deportiva",
+		"code": 4011,
+		"price": 1500,
+		"stock": 20,
+		"category": "Ropa",
+		"id": "1722642681827"
 	}
 ]
