@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = "./data/carts.json";
-const ProductsManager = require("../fileSystem/productsManager");
+const ProductsManager = require("./productsManager");
 
 const productManager = new ProductsManager();
 
