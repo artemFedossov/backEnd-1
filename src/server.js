@@ -26,7 +26,7 @@ app.use("/home", viewsRouter);
 // Socket.io
 const httpServer = app.listen(PORT, () => {
   console.log("Escuchando en el puerto: ", PORT);
-});
+}); 
 
 const io = new Server(httpServer);
 
