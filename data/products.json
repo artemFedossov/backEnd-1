@@ -7,5 +7,23 @@
 		"stock": 20,
 		"category": "Ropa",
 		"id": "1722642681827"
+	},
+	{
+		"title": "Remera",
+		"description": "Remera Nike",
+		"code": 4051,
+		"price": 2500,
+		"stock": 10,
+		"category": "Ropa",
+		"id": "1722642681845"
+	},
+	{
+		"title": "Zapatillas",
+		"description": "Zapatillas Running",
+		"code": 3015,
+		"price": 1500,
+		"stock": 40,
+		"category": "Calzado",
+		"id": "17226448781845"
 	}
 ]

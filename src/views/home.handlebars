@@ -1,9 +1,17 @@
 <main>
+  <h1>Productos</h1>
+  <div class="listaProductos">
     {{#each Productos}}
-    <ul>
-        <li>Código: {{id}} </li>
+      <ul>
         <li>Producto: {{title}}</li>
-    </ul>
+        <li>Categoria: {{category}}</li>
+        <li>Descripción: {{description}}</li>
+        <li>Codigo: {{code}}</li>
+        <li>Precio: $ {{price}}</li>
+        <li>Stock: {{stock}}</li>
+      </ul>
     {{/each}}
+  </div>
 </main>
 
+<script src="/assets/js/home.js"></script>
