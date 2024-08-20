@@ -14,7 +14,12 @@ router.get('/home', (req, res) => {
 })
 
 router.get('/realtimeproducts', (req, res) => {
-    res.render('realTimeProducts.handlebars', {});
+    productsManager.getProducts()
+        .then(products => {
+            res.render('realTimeProducts.handlebars', {
+                "Productos": products
+            });
+        })
 })
 
 module.exports = router;

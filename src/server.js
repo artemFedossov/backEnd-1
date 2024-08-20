@@ -38,8 +38,15 @@ io.on('connection', async (socket) => {
   try {
     const products = await productManager.getProducts();
     socket.emit("products", products)
+
+    socket.on('addProduct', async (product) => {
+      await productManager.getProduct(product);
+      const updatedProducts = await productManager.getProducts();
+      io.emit('products', updatedProducts);
+    });
+
   } catch (error) {
-    
+      console.error('Error al manejar la conexión del socket:', error);
   }
 })
 

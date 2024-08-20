@@ -3,6 +3,26 @@ const socket = io();
 const form = document.getElementById('form');
 const listProducts = document.getElementById('listProducts');
 
+function updateProductList(products) {
+    let listHTML = '';
+    products.forEach(product => {
+        listHTML += `
+        <div>
+            <h3>${product.title}</h3>
+            <p>Categoría: ${product.category}</p>
+            <p>Descripción: ${product.description}</p>
+            <p>Precio: $${product.price}</p>
+            <p>Código: ${product.code}</p>
+            <p>Stock: ${product.stock}</p>
+        </div>`;
+    });
+    listProducts.innerHTML = listHTML;
+}
+
+socket.on('products', (data) => {
+    updateProductList(data);
+});
+
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
@@ -28,23 +48,10 @@ form.addEventListener('submit', async (e) => {
         if (response.ok) {
             console.log("producto agregado")
             form.reset();
+            socket.emit('addProduct', producto);
         }
     } catch (error) {
         console.error('Error', error)   
     }
-
-    socket.on('products', (data) => {
-        let listHTML = '';
-
-        data.forEach(product => {
-            listHTML += `
-            <div>
-                <h3>${product.id}</h3>
-                <p>Precio: ${product.title}</p>
-            </div>`;
-        });
-
-        listProducts.innerHTML = listHTML;
-    })
 
 })
