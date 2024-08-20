@@ -1,29 +1,38 @@
 [
 	{
-		"title": "Remera",
-		"description": "Remera deportiva",
-		"code": 4011,
-		"price": 1500,
-		"stock": 20,
+		"title": "campera",
 		"category": "Ropa",
-		"id": "1722642681827"
-	},
-	{
-		"title": "Remera",
-		"description": "Remera Nike",
-		"code": 4051,
-		"price": 2500,
+		"description": "Campera rompe viento",
+		"price": 1500,
+		"code": 140,
 		"stock": 10,
-		"category": "Ropa",
-		"id": "1722642681845"
+		"id": "1724116068728"
 	},
 	{
-		"title": "Zapatillas",
-		"description": "Zapatillas Running",
-		"code": 3015,
-		"price": 1500,
-		"stock": 40,
-		"category": "Calzado",
-		"id": "17226448781845"
+		"title": "1",
+		"category": "1",
+		"description": "1",
+		"price": 1,
+		"code": 1,
+		"stock": 1,
+		"id": "1724121664539"
+	},
+	{
+		"title": "1",
+		"category": "1",
+		"description": "1",
+		"price": 1,
+		"code": 1,
+		"stock": 1,
+		"id": "1724121852657"
+	},
+	{
+		"title": "1",
+		"category": "1",
+		"description": "1",
+		"price": 1,
+		"code": 1,
+		"stock": 1,
+		"id": "1724126280651"
 	}
 ]
