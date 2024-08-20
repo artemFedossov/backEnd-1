@@ -1,0 +1,26 @@
+.etiquetas {
+    display: flex;
+    justify-content: space-between;
+    max-width: 270px;
+    padding: 2px;
+}
+
+.btn {
+    border-color: black;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 3px;
+    margin-left: 95px;
+    font-size: 15px;
+    transition: transform 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.tituloLista {
+    font-size: 30px;
+    color: blue;
+}

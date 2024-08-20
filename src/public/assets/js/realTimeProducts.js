@@ -7,17 +7,19 @@ function updateProductList(products) {
     let listHTML = '';
     products.forEach(product => {
         listHTML += `
-        <div>
-            <h3>${product.title}</h3>
-            <p>Categoría: ${product.category}</p>
-            <p>Descripción: ${product.description}</p>
-            <p>Precio: $${product.price}</p>
-            <p>Código: ${product.code}</p>
-            <p>Stock: ${product.stock}</p>
-        </div>`;
+        <ul>
+            <li><strong>Producto:</strong> ${product.title}</li>
+            <li><strong>Categoria:</strong> ${product.category}</li>
+            <li><strong>Descripción:</strong> ${product.description}</li>
+            <li><strong>Codigo:</strong> ${product.code}</li>
+            <li><strong>Precio:</strong> $${product.price}</li>
+            <li><strong>Stock:</strong> ${product.stock}</li>
+        </ul>`;
     });
     listProducts.innerHTML = listHTML;
 }
+
+
 
 socket.on('products', (data) => {
     updateProductList(data);
