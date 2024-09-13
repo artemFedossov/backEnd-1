@@ -2,10 +2,10 @@ const express = require("express");
 const handlebars = require('express-handlebars')
 const { Server } = require('socket.io');
 
-const productsRouter = require("./routes/productsRouter.js");
-const cartsRouter = require("./routes/cartsRouter.js");
-const viewsRouter = require('./routes/viewsRouter.js');
-const ProductsManager = require("./managers/fileSystem/productsManager.js");
+const productsRouter = require("./router/api/productsRouter.js");
+const cartsRouter = require("./router/api/cartsRouter.js");
+const viewsRouter = require('./router/viewsRouter.js');
+const ProductsManager = require("./daos/fileSystem/productsManager.js");
 
 const app = express();
 const PORT = 8080;

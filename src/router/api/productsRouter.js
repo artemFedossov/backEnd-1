@@ -1,5 +1,5 @@
 const { Router } = require("express");
-const ProductsManager = require("../managers/fileSystem/productsManager");
+const ProductsManager = require("../../daos/fileSystem/productsManager");
 
 const router = Router();
 
