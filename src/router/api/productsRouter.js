@@ -1,10 +1,14 @@
 const { Router } = require("express");
 const ProductsManager = require("../../daos/fileSystem/productsManager");
+const { ProductManagerMongo } = require("../../daos/MONGO/products.mongo");
 
 const router = Router();
-
-const { getProducts, createProduct, getProduct, updateProduct, deleteProduct } =
-  new ProductsManager();
+const { 
+  getProducts, 
+  createProduct, 
+  getProduct, 
+  updateProduct, 
+  deleteProduct } = new ProductManagerMongo()
 
 // Obtiene todos los productos
 router.get("/", async (req, res) => {
