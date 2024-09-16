@@ -1,38 +1,55 @@
-<main>
-  <h1>Panel de Productos</h1>
-  <form action="/" method="post" id="form">
-    <div class="etiquetas">
-      <label for="title">Titulo:</label>
-      <input type="text" name="title" id="title" required />
+<div class="container">
+  <h1 class="text-center">Agregar (eliminar) Productos en tiempo real</h1>
+
+  <form id="product-form" class="product-form">
+    <input
+      type="text"
+      id="product-title"
+      placeholder="Título del producto"
+      required
+      class="form-control input-wide"
+    />
+    <textarea
+      id="product-description"
+      placeholder="Descripción del producto"
+      required
+      class="form-control input-wide"
+    ></textarea>
+    <div class="form-row">
+      <input
+        type="text"
+        id="product-code"
+        placeholder="Código del producto"
+        required
+        class="form-control input-small"
+      />
+      <input
+        type="number"
+        id="product-price"
+        placeholder="Precio del producto"
+        required
+        class="form-control input-small"
+      />
+      <input
+        type="number"
+        id="product-stock"
+        placeholder="Stock del producto"
+        required
+        class="form-control input-small"
+      />
     </div>
-    <div class="etiquetas">
-      <label for="category">Categoria:</label>
-      <input type="text" name="category" id="category" required />
+    <input
+      type="text"
+      id="product-thumbnails"
+      placeholder="Thumbnails del producto (opcional)"
+      class="form-control input-wide"
+    />
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary mt-3">Agregar Producto</button>
     </div>
-    <div class="etiquetas">
-      <label for="description">Descripcion:</label>
-      <input type="text" name="description" id="description" required />
-    </div>
-    <div class="etiquetas">
-      <label for="price">Precio:</label>
-      <input type="number" name="price" id="price" required />
-    </div>
-    <div class="etiquetas">
-      <label for="code">Codigo:</label>
-      <input type="number" name="code" id="code" required />
-    </div>
-    <div class="etiquetas">
-      <label for="stock">Stock:</label>
-      <input type="number" name="stock" id="stock" required />
-    </div>
-    <button class="btn" type="submit" id="btnAdd">Agregar Producto</button>
   </form>
 
-  <p class="tituloLista">Lista de productos</p>
+  <div id="productos-listado"></div>
+</div>
 
-  <div class="listaProductos" id="listProducts"></div>
-
-</main>
-
-<script src="/socket.io/socket.io.js"></script>
-<script src="/assets/js/realTimeProducts.js"></script>
+<script src="/main.js"></script>

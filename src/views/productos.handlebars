@@ -1,0 +1,19 @@
+<p class="titulo-index">TODOS NUESTROS PRODUCTOS</p>
+
+<div class="nombre-productos" id="productos">
+  {{#each products}}
+    {{> card}}
+  {{/each}}
+</div>
+
+<div class="pagination justify-content-center mt-4">
+  {{#if hasPrevPage}}
+    <a href="?page={{prevPage}}&limit=3" class="btn btn-primary mx-2">Anterior</a>
+  {{/if}}
+<hr>
+  <span class="paginacion">Página {{currentPage}} de {{totalPages}}</span>
+  {{#if hasNextPage}}
+    <a href="?page={{nextPage}}&limit=3" class="btn btn-primary mx-2">Siguiente</a>
+  {{/if}}
+  <hr>
+</div>

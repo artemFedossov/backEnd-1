@@ -1,0 +1,37 @@
+<div class="container">
+  <h1 class="text-center">Carrito de Compras</h1>
+
+  {{#if carritos.length}}
+    {{#each carritos}}
+      <div class="carrito">
+       
+        <ul>
+          {{#each products}}
+            <li>
+              {{product.title}} - Cantidad: {{quantity}} - Precio: ${{product.price}}
+              <button 
+                class="btn btn-danger btn-sm delete-product-btn" 
+                data-cart-id="{{../id}}" 
+                data-product-id="{{product._id}}">
+                Eliminar
+              </button>
+              <br>Subtotal: ${{multiply product.price quantity}}
+              
+            </li>
+          {{/each}}
+        </ul>
+        
+        <!-- Total General del Carrito -->
+        <h3>Total del Carrito: ${{calculateTotal products}}</h3>
+      </div>
+      <hr>
+    {{/each}}
+  {{else}}
+    <p>No se encontraron carritos.</p>
+  {{/if}}
+</div>
+
+<script src="/botonEliminarProductoCarrito.js"></script>
+
+
+
